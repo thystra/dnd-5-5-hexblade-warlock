@@ -10,10 +10,10 @@ The magic of your patron ensures you always have certain spells ready. When you 
 
 | Warlock Level | Spells |
 |---:|---|
-| 3 | Shield, Wrathful Smite, Blur, Magic Weapon |
-| 5 | Bestow Curse, Spirit Shroud |
+| 3 | Shield, Wrathful Smite, Hex, Armor of Agathys, Mirror Image (testing vs Hex) |
+| 5 | Conjure Barrage, Spirit Shroud |
 | 7 | Shadow of Moil, Staggering Smite |
-| 9 | Banishing Smite, Hold Monster |
+| 9 | Steel Wind Strike, Hold Monster |
 
 ### Optional unarmored variant
 
