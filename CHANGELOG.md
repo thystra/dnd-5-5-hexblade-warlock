@@ -1,3 +1,12 @@
+## 0.1.5
+
+- Added Hexblade Spellcasting Focus text: the Pact Weapon is the conduit for Warlock magic and Hexblade features.
+- Kept the approved alternate Hexblade Patron spell list.
+- Added a best-effort Summon activity to Hexbound Specter.
+- Added Life Drain attack activities to the Hexbound Specter actor with 3d6, 4d6, and 5d6 variants.
+- Added a Macro compendium with spell import and Hexbound Specter summon helper macros.
+- Added editable macro sources under scripts/.
+
 ## 0.1.4
 
 - Updated Hexblade Patron Spells to the alternate playtest spell list.
