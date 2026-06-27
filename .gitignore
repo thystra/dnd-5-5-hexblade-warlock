@@ -1,0 +1,22 @@
+# OS/editor noise
+.DS_Store
+Thumbs.db
+*~
+*.swp
+
+# Logs / local scratch
+*.log
+/tmp/
+
+# Foundry may migrate legacy .db packs into LevelDB folders locally.
+# Keep the source pack .db tracked, but don't accidentally commit runtime-migrated DB folders.
+packs/hexblade-items/
+packs/*/CURRENT
+packs/*/LOCK
+packs/*/LOG
+packs/*/MANIFEST-*
+packs/*/*.ldb
+packs/*/*.log
+
+# Release ZIPs
+*.zip

@@ -1,0 +1,49 @@
+{
+  "id": "hexblade-patron-playtest",
+  "title": "Hexblade Patron Playtest",
+  "description": "Homebrew 2024-style Hexblade Patron subclass for the Foundry VTT dnd5e system. v0.1.1 fixes the Reaper’s Aura icon path and adds git workflow notes.",
+  "authors": [
+    {
+      "name": "Alan Johnson / ChatGPT playtest draft"
+    }
+  ],
+  "version": "0.1.1",
+  "compatibility": {
+    "minimum": "14",
+    "verified": "14"
+  },
+  "relationships": {
+    "systems": [
+      {
+        "id": "dnd5e",
+        "type": "system",
+        "compatibility": {
+          "minimum": "5.3.3",
+          "verified": "5.3.3"
+        }
+      }
+    ]
+  },
+  "packs": [
+    {
+      "name": "hexblade-items",
+      "label": "Hexblade Patron Playtest: Items",
+      "system": "dnd5e",
+      "path": "./packs/hexblade-items.db",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {
+        "dnd5e": {
+          "sourceBook": "Homebrew Playtest",
+          "types": [
+            "subclass",
+            "feat"
+          ]
+        }
+      }
+    }
+  ]
+}
