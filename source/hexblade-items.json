@@ -37,6 +37,10 @@
                 "optional": false
               },
               {
+                "uuid": "Compendium.dnd-5-5-hexblade-warlock.hexblade-items.Item.hxbCharges000001",
+                "optional": false
+              },
+              {
                 "uuid": "Compendium.dnd-5-5-hexblade-warlock.hexblade-items.Item.hxbSoul000000001",
                 "optional": false
               },
@@ -97,6 +101,25 @@
           "value": {},
           "level": 10,
           "title": "Hexblade Patron Features"
+        },
+        {
+          "_id": "hxbArmorTrait01",
+          "type": "Trait",
+          "configuration": {
+            "allowReplacements": false,
+            "choices": [],
+            "grants": [
+              "armor:med",
+              "armor:shl"
+            ],
+            "mode": "default"
+          },
+          "value": {
+            "chosen": []
+          },
+          "level": 3,
+          "title": "Hexblade Armor Training",
+          "hint": "You gain proficiency with medium armor and shields."
         },
         {
           "_id": "hxbAdvChoice0001",
@@ -172,7 +195,7 @@
     "img": "icons/magic/symbols/runes-star-pentagon-blue.webp",
     "system": {
       "description": {
-        "value": "<h2>Hexblade Patron Spells</h2>\n<p>The magic of your patron ensures you always have certain spells ready. When you reach a Warlock level specified in the Hexblade Patron Spells table, you thereafter always have the listed spells prepared.</p>\n<pre>| Warlock Level | Spells |</pre>\n<pre>|---:|---|</pre>\n<pre>| 3 | Shield, Wrathful Smite, Blur, Magic Weapon |</pre>\n<pre>| 5 | Bestow Curse, Spirit Shroud |</pre>\n<pre>| 7 | Shadow of Moil, Staggering Smite |</pre>\n<pre>| 9 | Banishing Smite, Hold Monster |</pre>\n<h3>Optional unarmored variant</h3>\n<p>If the Hexblade is intended to be an unarmored shadow-duelist rather than an armored defender, the DM may replace Wrathful Smite with Mage Armor. For the default armored defender version, use Shield and Wrathful Smite.</p>",
+        "value": "<h2>Hexblade Patron Spells</h2>\n<p>The magic of your patron ensures you always have certain spells ready. When you reach a Warlock level specified in the Hexblade Patron Spells table, you thereafter always have the listed spells prepared.</p>\n\n<table>\n  <thead>\n    <tr>\n      <th>Warlock Level</th>\n      <th>Spells</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>3</td>\n      <td><em>Shield</em>, <em>Wrathful Smite</em>, <em>Blur</em>, <em>Magic Weapon</em></td>\n    </tr>\n    <tr>\n      <td>5</td>\n      <td><em>Bestow Curse</em>, <em>Spirit Shroud</em></td>\n    </tr>\n    <tr>\n      <td>7</td>\n      <td><em>Shadow of Moil</em>, <em>Staggering Smite</em></td>\n    </tr>\n    <tr>\n      <td>9</td>\n      <td><em>Banishing Smite</em>, <em>Hold Monster</em></td>\n    </tr>\n  </tbody>\n</table>\n\n<h3>Optional unarmored variant</h3>\n<p>If the Hexblade is intended to be an unarmored shadow-duelist rather than an armored defender, the DM may replace <em>Wrathful Smite</em> with <em>Mage Armor</em>. For the default armored defender version, use <em>Shield</em> and <em>Wrathful Smite</em>.</p>\n\n<p><strong>Foundry note:</strong> This feature does not grant spell items automatically. Drag the spells from your installed PHB or rules compendium, or add an automation macro later that grants spells by UUID when the matching compendium is available.</p>",
         "chat": ""
       },
       "source": {
@@ -289,9 +312,14 @@
         "book": ""
       },
       "uses": {
-        "max": "",
+        "max": "@prof",
         "spent": 0,
-        "recovery": []
+        "recovery": [
+          {
+            "period": "lr",
+            "type": "recoverAll"
+          }
+        ]
       },
       "type": {
         "value": "class",
@@ -323,6 +351,59 @@
       "default": 0
     },
     "_key": "!items!hxbAura000000001"
+  },
+  {
+    "_id": "hxbCharges000001",
+    "name": "Hex Charges",
+    "type": "feat",
+    "img": "icons/magic/unholy/orb-swirling-purple.webp",
+    "system": {
+      "description": {
+        "value": "<h2>Hex Charges</h2>\n<p>When you activate Hex Aura, you gain a number of Hex Charges equal to your Proficiency Bonus. You can spend these charges on your Hexblade features. Unspent Hex Charges vanish when the aura ends.</p>\n<p><strong>Foundry use:</strong> Set this resource to full when you activate Hex Aura. Spend one charge when using Soul Reaping, Hexing Challenge, Nimble Escape, Warding Aura, Mend the Bound Spirit, or other Hexblade features that require a Hex Charge.</p>",
+        "chat": ""
+      },
+      "source": {
+        "custom": "Hexblade Patron Playtest",
+        "rules": "2024",
+        "revision": 1,
+        "license": "Homebrew Playtest",
+        "book": ""
+      },
+      "uses": {
+        "max": "@prof",
+        "spent": 0,
+        "recovery": []
+      },
+      "type": {
+        "value": "class",
+        "subtype": ""
+      },
+      "prerequisites": {
+        "level": 3
+      },
+      "properties": [],
+      "requirements": "Warlock (Hexblade Patron) 3",
+      "activities": {},
+      "advancement": [],
+      "identifier": "hex-charges"
+    },
+    "effects": [],
+    "flags": {},
+    "_stats": {
+      "duplicateSource": null,
+      "coreVersion": "13.348",
+      "systemId": "dnd5e",
+      "systemVersion": "5.2.0",
+      "createdTime": 1770000000000,
+      "modifiedTime": 1770000100000,
+      "lastModifiedBy": "hexbladeplaytest",
+      "exportSource": null
+    },
+    "sort": 350000,
+    "ownership": {
+      "default": 0
+    },
+    "_key": "!items!hxbCharges000001"
   },
   {
     "_id": "hxbSoul000000001",
@@ -620,7 +701,88 @@
       },
       "properties": [],
       "requirements": "Warlock (Hexblade Patron) 6",
-      "activities": {},
+      "activities": {
+        "hxbMendHeal0001": {
+          "_id": "hxbMendHeal0001",
+          "type": "heal",
+          "activation": {
+            "type": "bonus",
+            "value": 1,
+            "condition": "Hex Aura active; spend 1 Hex Charge manually.",
+            "override": false
+          },
+          "consumption": {
+            "targets": [],
+            "scaling": {
+              "allowed": false,
+              "max": ""
+            },
+            "spellSlot": false
+          },
+          "description": {
+            "chatFlavor": "Spend 1 Hex Charge. Restore hit points to one Hexbound Specter inside your Hex Aura."
+          },
+          "duration": {
+            "concentration": false,
+            "value": "",
+            "units": "",
+            "special": "",
+            "override": false
+          },
+          "effects": [],
+          "range": {
+            "units": "spec",
+            "special": "Inside your Hex Aura",
+            "override": false
+          },
+          "target": {
+            "template": {
+              "count": "",
+              "contiguous": false,
+              "type": "",
+              "size": "",
+              "width": "",
+              "height": "",
+              "units": ""
+            },
+            "affects": {
+              "count": "1",
+              "type": "ally",
+              "choice": false,
+              "special": "One Hexbound Specter you summoned inside your Hex Aura"
+            },
+            "prompt": true,
+            "override": false
+          },
+          "healing": {
+            "number": null,
+            "denomination": null,
+            "bonus": "",
+            "types": [
+              "healing"
+            ],
+            "custom": {
+              "enabled": true,
+              "formula": "min(4, 2 + floor(max(0, @classes.warlock.levels - 6) / 4))d6 + @abilities.cha.mod"
+            },
+            "scaling": {
+              "mode": "whole",
+              "number": null,
+              "formula": ""
+            }
+          },
+          "uses": {
+            "spent": 0,
+            "recovery": [],
+            "max": ""
+          },
+          "sort": 0,
+          "name": "Mend the Bound Spirit",
+          "img": "icons/magic/life/heart-cross-strong-purple-orange.webp",
+          "appliedEffects": [],
+          "enchant": {}
+        }
+      },
       "advancement": [],
       "identifier": "mend-the-bound-spirit"
     },
