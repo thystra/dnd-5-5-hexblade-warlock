@@ -1,3 +1,11 @@
+## 0.1.9
+
+- Reworded Soul Reaping to positive once-per-turn wording.
+- Soul Reaping now allows Reaction use when its trigger occurs outside your turn.
+- Added a Soul Reaping roll activity for `1d6 + @abilities.cha.mod` Temporary Hit Points.
+- Added an Apply Hexed Steel to Pact Weapon macro.
+- The Hexed Steel macro duplicates a weapon attack activity and adds the correct extra Necrotic die based on Warlock level.
+
 ## 0.1.8
 
 - Fixed Hex Charges showing 0 charges when Charisma modifier is 0.

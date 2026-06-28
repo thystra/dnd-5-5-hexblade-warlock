@@ -412,7 +412,7 @@
     "img": "icons/magic/death/skull-energy-light-purple.webp",
     "system": {
       "description": {
-        "value": "<h2>Level 3: Soul Reaping</h2>\n<p>When a hostile creature you can see is reduced to 0 Hit Points inside your Hex Aura, you can spend 1 Hex Charge to gain Temporary Hit Points equal to 1d6 + your Charisma modifier.</p>\n<p>You can use this feature no more than once per turn.</p>",
+        "value": "<h2>Soul Reaping</h2>\n<p>Once per turn, when a hostile creature you can see drops to 0 Hit Points while inside your Hex Aura, you can spend 1 Hex Charge to gain Temporary Hit Points equal to <strong>1d6 + your Charisma modifier</strong>.</p>\n<p>If this trigger occurs outside your turn, you can use your Reaction to use this feature.</p>\n<p><strong>Foundry use:</strong> Use the <em>Soul Reaping</em> activity to roll the Temporary Hit Points. Hex Charge consumption is manual for now; reduce the <em>Hex Charges</em> feature by 1 when you use this activity.</p>",
         "chat": ""
       },
       "source": {
@@ -436,7 +436,94 @@
       },
       "properties": [],
       "requirements": "Warlock (Hexblade Patron) 3",
-      "activities": {},
+      "activities": {
+        "hxbSoulReapRoll01": {
+          "_id": "hxbSoulReapRoll01",
+          "type": "heal",
+          "activation": {
+            "type": "special",
+            "value": null,
+            "condition": "When a hostile creature you can see drops to 0 HP inside your Hex Aura; use your Reaction if this occurs outside your turn.",
+            "override": false
+          },
+          "consumption": {
+            "targets": [],
+            "scaling": {
+              "allowed": false,
+              "max": ""
+            },
+            "spellSlot": false
+          },
+          "description": {
+            "chatFlavor": "Spend 1 Hex Charge. Gain Temporary Hit Points equal to 1d6 + your Charisma modifier."
+          },
+          "duration": {
+            "concentration": false,
+            "value": "",
+            "units": "inst",
+            "special": "",
+            "override": false
+          },
+          "effects": [],
+          "range": {
+            "units": "self",
+            "special": "",
+            "override": false
+          },
+          "target": {
+            "template": {
+              "count": "",
+              "contiguous": false,
+              "type": "",
+              "size": "",
+              "width": "",
+              "height": "",
+              "units": ""
+            },
+            "affects": {
+              "count": "1",
+              "type": "self",
+              "choice": false,
+              "special": ""
+            },
+            "prompt": false,
+            "override": false
+          },
+          "healing": {
+            "number": null,
+            "denomination": null,
+            "bonus": "",
+            "types": [
+              "temphp"
+            ],
+            "custom": {
+              "enabled": true,
+              "formula": "1d6 + @abilities.cha.mod"
+            },
+            "scaling": {
+              "mode": "whole",
+              "number": null,
+              "formula": ""
+            }
+          },
+          "uses": {
+            "spent": 0,
+            "recovery": [],
+            "max": ""
+          },
+          "sort": 0,
+          "name": "Soul Reaping",
+          "img": "icons/magic/death/skull-energy-light-purple.webp",
+          "appliedEffects": [],
+          "enchant": {},
+          "visibility": {
+            "level": {
+              "min": null,
+              "max": null
+            }
+          }
+        }
+      },
       "advancement": [],
       "identifier": "soul-reaping"
     },
@@ -518,7 +605,7 @@
     "img": "icons/skills/melee/blade-tip-chipped-blood-red.webp",
     "system": {
       "description": {
-        "value": "<h2>Level 6: Hexed Steel</h2>\n<p>Once per turn, when you hit a creature with a melee weapon attack while it is inside your Hex Aura, you can deal an extra 1d6 Necrotic damage to it.</p>\n<p>This extra damage becomes 1d8 when you reach Warlock level 10 and 1d12 when you reach Warlock level 14.</p>",
+        "value": "<h2>Level 6: Hexed Steel</h2>\n<p>Once per turn, when you hit a creature with a melee weapon attack while it is inside your Hex Aura, you can deal an extra 1d6 Necrotic damage to it.</p>\n<p>This extra damage becomes 1d8 when you reach Warlock level 10 and 1d12 when you reach Warlock level 14.</p>\n<h3>Foundry weapon workflow</h3>\n<p>Use the <em>Apply Hexed Steel to Pact Weapon</em> macro from the <strong>Hexblade Warlock: Macros</strong> compendium. The macro duplicates one attack activity on the selected weapon and adds the appropriate Hexed Steel necrotic damage die to the duplicate attack, so the player can choose either the normal attack or the Hexed Steel attack.</p>\n<p>Run the macro again after leveling or changing the Pact Weapon. It removes older Hexed Steel attack duplicates before adding the current version.</p>\n",
         "chat": ""
       },
       "source": {
