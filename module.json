@@ -1,16 +1,16 @@
 {
-  "id": "dnd-5-5-hexblade-warlock",
-  "title": "Hexblade Patron Playtest",
-  "description": "Homebrew 2024-style Hexblade Patron subclass for the Foundry VTT dnd5e system. v0.1.2 updates name and paths",
+  "id": "soul-blade-warlock-patron",
+  "title": "Soul Blade Patron for Warlocks",
+  "description": "A custom patron and subclass for Warlocks that features a Soul Blade as their patron.",
   "authors": [
     {
       "name": "Alan Johnson / ChatGPT playtest draft"
     }
   ],
-  "version": "0.1.9",
-  "url": "https://github.com/thystra/dnd-5-5-hexblade-warlock",
-  "manifest": "https://github.com/thystra/dnd-5-5-hexblade-warlock/releases/latest/download/module.json",
-  "download": "https://github.com/thystra/dnd-5-5-hexblade-warlock/releases/latest/download/dnd-5-5-hexblade-warlock.zip",
+  "version": "0.2.0",
+  "url": "https://github.com/thystra/soul-blade-warlock-patron",
+  "manifest": "https://github.com/thystra/soul-blade-warlock-patron/releases/latest/download/module.json",
+  "download": "https://github.com/thystra/soul-blade-warlock-patron/releases/latest/download/soul-blade-warlock-patron.zip",
   "compatibility": {
     "minimum": "14",
     "verified": "14"
@@ -30,9 +30,9 @@
   "packs": [
     {
       "name": "hexblade-items",
-      "label": "Hexblade Patron Playtest: Items",
+      "label": "Soul Blade Patron: Items",
       "system": "dnd5e",
-      "path": "./packs/hexblade-items.db",
+      "path": "./packs/soulbladepatron-items.db",
       "type": "Item",
       "ownership": {
         "PLAYER": "OBSERVER",
@@ -40,7 +40,7 @@
       },
       "flags": {
         "dnd5e": {
-          "sourceBook": "Homebrew Playtest",
+          "sourceBook": "Soul Blade Patron",
           "types": [
             "subclass",
             "feat"
@@ -49,10 +49,10 @@
       }
     },
     {
-      "name": "hexblade-actors",
-      "label": "Hexblade Warlock: Actors",
+      "name": "soulblade-actors",
+      "label": "Soul Blade Patron: Actors",
       "system": "dnd5e",
-      "path": "./packs/hexblade-actors.db",
+      "path": "./packs/soulblade-actors.db",
       "type": "Actor",
       "ownership": {
         "PLAYER": "OBSERVER",
@@ -60,7 +60,7 @@
       },
       "flags": {
         "dnd5e": {
-          "sourceBook": "Homebrew Playtest",
+          "sourceBook": "Soul Blade Patron",
           "types": [
             "npc"
           ]
@@ -68,9 +68,9 @@
       }
     },
     {
-      "name": "hexblade-macros",
-      "label": "Hexblade Warlock: Macros",
-      "path": "./packs/hexblade-macros.db",
+      "name": "soulblade-macros",
+      "label": "Soul Blade Patron: Macros",
+      "path": "./packs/soulblade-macros.db",
       "type": "Macro",
       "ownership": {
         "PLAYER": "OBSERVER",
