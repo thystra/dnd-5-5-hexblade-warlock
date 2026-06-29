@@ -1,6 +1,6 @@
 # Soul Blade Patron Playtest
 
-A local Foundry VTT module for Foundry v14 / dnd5e 5.3.3 containing a homebrew 2024-style Warlock subclass: **Hexblade Patron**.
+A local Foundry VTT module for Foundry v14 / dnd5e 5.3.3 containing a homebrew 2024-style Warlock subclass: **Soul Blade Patron Patron**.
 
 ## Contents
 
@@ -9,7 +9,7 @@ A local Foundry VTT module for Foundry v14 / dnd5e 5.3.3 containing a homebrew 2
 - Feature items for levels 3, 6, 10, and 14
 - A level-14 Item Choice advancement for **Greater Hex**
 - `CLEAN_COPY.md` with the full readable subclass text
-- `source/hexblade-items.json` with editable JSON source for the pack contents
+- `source/soulblade-items.json` with editable JSON source for the pack contents
 
 ## Install
 
